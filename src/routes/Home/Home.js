@@ -3,7 +3,7 @@ import React from "react"
 const Home = props =>
   <div>
     <section className="cf mt5 pv5 bt b--black-05 ph6-l">
-      <h1 className="tc f5 ttu fw6 tracked mb4 avenir">Other Projects</h1>
+      <h1 className="tc f5 ttu fw6 tracked mb4 avenir">Our Projects</h1>
       <a
         href="#0"
         className="fl w-third w-25-ns border-box overflow-hidden ba bw2 white"
