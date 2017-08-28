@@ -1,9 +1,8 @@
 import React from "react"
 
-const Home = (props) => (
-    <div>
-        Welcome to Fortraiz
-    </div>
-)
+const Home = props =>
+  <div>
+    Homepage
+  </div>;
 
 export default Home

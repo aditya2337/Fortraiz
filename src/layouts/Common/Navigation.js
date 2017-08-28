@@ -1,9 +1,9 @@
-import React from 'react';
-import images from '../../config/images';
+import React from "react";
+import images from "../../config/images";
 
 const Navigation = props =>
-  <nav className="w-100 center bg-black fixed">
-    <div className="dt mw9 center w-100">
+  <nav className='w-100 center absolute'>
+    <div className='dt mw9 center w-100'>
       <div className="dtc w2 v-mid pa3">
         <a
           href="/"
