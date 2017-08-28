@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Navigation from "./Navigation";
 import HomepageHero from './HomepageHero';
+import Footer from './Footer';
 
 const Layout = ({ component: Component, ...rest }) =>
   <Route
@@ -13,6 +14,7 @@ const Layout = ({ component: Component, ...rest }) =>
         <div className="mw9 pl3 pr3 center">
           <Component {...matchProps} />
         </div>
+        <Footer />
       </div>}
   />;
 
