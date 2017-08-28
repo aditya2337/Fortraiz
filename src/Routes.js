@@ -5,34 +5,9 @@ import {
   Switch,
   Link
 } from 'react-router-dom';
-import Paper from 'material-ui/Paper';
-import images from './config/images';
-import styled, { keyframes } from 'styled-components';
 
-const spin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`;
-
-const Logo = styled.img`
-  animation: ${spin} infinite 20s linear;
-`;
-
-const Home = () => (
-  <div className='flex justify-center items-center h-100'>
-    <Paper
-      className='pa5'
-      rounded={false}
-      style={{
-        backgroundColor: '#757575'
-      }}
-      zDepth={3}>
-      <Logo src={images.logo} alt='logo' />
-      <h1 className='white-90 f3 f2-m measure lh-title fw1 mt0'>Welcome to the world of react!!</h1>
-      <div className='tc white-90 fw1'>Store's done and  connected</div>
-    </Paper>
-  </div>
-);
+import CommonLayout from './layouts/Common';
+import Home from './routes/Home';
 
 const NoMatch = ({ location }) => (
   <section className='flex items-center flex-column justify-center h-100 bg-washed-blue'>
@@ -47,13 +22,12 @@ const NoMatch = ({ location }) => (
 );
 
 // All the routes of our app
-const Routes = () => (
+const Routes = () =>
   <Router>
     <Switch>
-      <Route path='/' exact component={Home} />
+      <CommonLayout path="/" exact component={Home} />
       <Route component={NoMatch} />
     </Switch>
-  </Router>
-);
+  </Router>;
 
 export default Routes;
